@@ -28,19 +28,19 @@ const Main = () => {
               <p>How can I help you today?</p>
             </div>
             <div className="cards">
-              <div className="card">
-                <p>Suggest some cool places for summer trip</p>
+              <div onClick={() => setInput("Suggest some cool places for summer trip")} className="card">
+                <p> Suggest some cool places for summer trip</p>
                 <img src={assets.compass_icon} alt="" />
               </div>
-              <div className="card">
+              <div onClick={() => setInput("Summarize the concept of Urban Planning")} className="card">
                 <p>Summarize the concept of Urban Planning</p>
                 <img src={assets.bulb_icon} alt="" />
               </div>
-              <div className="card">
+              <div onClick={() => setInput("Brainstorming team bonding activites for our work retreat")} className="card">
                 <p>Brainstorming team bonding activites for our work retreat</p>
                 <img src={assets.message_icon} alt="" />
               </div>
-              <div className="card">
+              <div onClick={() => setInput("Improve the readibility of the following code")} className="card">
                 <p>Improve the readibility of the following code</p>
                 <img src={assets.code_icon} alt="" />
               </div>
@@ -79,7 +79,7 @@ const Main = () => {
             <div>
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
-              <img onClick={() => onSent()} src={assets.send_icon} alt="" />
+             {input ? <img onClick={() => onSent()} src={assets.send_icon} alt="" /> :null } 
             </div>
           </div>
           <p className="bottom-info">
